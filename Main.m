@@ -1,6 +1,7 @@
 clear all , close all , clc
 
 % Reacheable positions 
+% commentaire inutile
 %x,y,z = gripper(M)
 plot_workspace(true ,  1);
 
