@@ -8,14 +8,15 @@ function plot_workspace(animation ,fig)
     Z = [];
 
     figure(fig),
-    for teta1 =  -90 : 10  :90
+    for teta1 =  0 : 10  :180
         for teta2 = 0 : 10 : 180
             for teta3 = -90 : 10 : 90
-                for teta4 = 0 : 10 : 180
+                for teta4 = -90 : 10 : 90
+                
                       % Gripper positions
-                      xg = (a2 *cosd(teta2) + a3 *cosd(90-teta3) + a4 *cosd(teta4)) *cosd(teta1);
-                      yg = (a2 *cosd(teta2) + a3 *cosd(90-teta3) + a4 *cosd(teta4)) *sind(teta1);
-                      zg = 6.3 + a2 *sind(teta2) + a3 *sind(90-teta3) + a4 *sind(teta4);
+                      xg = (a2 *cosd(teta2) + a3 *cosd(teta3 + teta2) + a4 *cosd(teta4+teta3 + teta2)) *cosd(teta1);
+                      yg = (a2 *cosd(teta2) + a3 *cosd(teta3+ teta2) + a4 *cosd(teta4+teta3 + teta2)) *sind(teta1);
+                      zg = 6.3 + a2 *sind(teta2) + a3 *sind(teta3+ teta2) + a4 *sind(teta4+teta3 + teta2);
     
                       X = [X xg]; % X.append(x)
                       Y = [Y yg];

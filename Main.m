@@ -1,14 +1,20 @@
 clear all , close all , clc
 
 % Reacheable positions 
-%x,y,z = gripper(M)
-plot_workspace(true ,  1);
+%plot_workspace(false ,  1);
 
 % Forward kinematcis
-%move_angles(180,10,30,-20, "blue" , 2);
+move_angles(180,50,-20,40, "blue" , 2);
 
-% Inverse kinematics
-%move_position(10,10,10,20,20,20,"blue",11)
+
+% TO DO 
+  % move_position() ;  ==> inverse kinematics
+  
+  % robot_plotter_animated_inverse_kinematics()
+  
+  %
+
+
 
 
 

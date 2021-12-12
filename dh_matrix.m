@@ -4,8 +4,8 @@ function matrix = dh_matrix(Param)
     param = num2cell(Param);
     [alpha ,  a , d ,teta] = deal(param{:});
 
-    matrix = [ cos(teta),   -cos(alpha)*sin(teta),  sin(alpha)*sin(teta),    a*cos(teta);
-               sin(teta),    cos(alpha)*cos(teta),  -sin(alpha)*cos(teta),   a*sin(teta);
-               0,             sin(alpha),            cos(alpha),              d;
+    matrix = [ cosd(teta),   -cosd(alpha)*sind(teta),  sind(alpha)*sind(teta),    a*cosd(teta);
+               sind(teta),    cosd(alpha)*cosd(teta),  -sind(alpha)*cosd(teta),   a*sind(teta);
+               0,             sind(alpha),            cosd(alpha),              d;
                0,             0,                     0,                       1;];
 end
